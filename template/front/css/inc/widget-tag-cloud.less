@@ -1,0 +1,29 @@
+/* Widget tag cloud
+/* ========================================================================== */
+
+@import "vars";
+
+.widget-tag-cloud {
+  ul {
+    overflow: hidden;
+    margin-top: -7px;
+    li {
+      float: left;
+      margin-top: 7px;
+      margin-right: 5px;
+      a {
+        display: block;
+        padding: 4px 11px;
+        font-size: 14px;
+        line-height: 22px;
+        color: @dark;
+        border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+        &:hover {
+          color: @white;
+          background-color: @dark;
+          border-color: @dark;
+        }
+      }
+    }
+  }
+}

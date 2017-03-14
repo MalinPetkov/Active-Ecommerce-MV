@@ -1,0 +1,36 @@
+/* Social icons line
+/* ========================================================================= */
+
+@import "vars";
+
+.social-icons {
+  margin: -15px 0 20px 0;
+  line-height: 30px;
+  overflow: hidden;
+  li {
+    padding: 15px 10px 0 0;
+    float: left;
+  }
+  a {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: transparent;
+    border: solid 1px @dark;
+    color: @dark;
+    &:hover {
+      background-color: darken(@color, 30%);
+      color: @white;
+    }
+//    &,
+//    &:hover {
+//      -webkit-transition: none;
+//      -moz-transition: none;
+//      -o-transition: none;
+//      transition: none;
+//    }
+  }
+}

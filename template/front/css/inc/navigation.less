@@ -1,0 +1,268 @@
+/* Navigation / superfish skin
+/* ========================================================================== */
+
+@import "vars";
+
+.navigation {
+  position: relative;
+  text-align: center;
+  line-height: 0;
+  .nav.sf-menu {
+    line-height: 1.72;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto !important;
+    li {
+
+    }
+  }
+  ul {list-style: none;}
+}
+
+/* SUPERFISH ESSENTIAL STYLES */
+
+//.sf-menu,
+//.sf-menu * {margin: 0; padding: 0;}
+.sf-menu {margin: 0; padding: 0;}
+.sf-menu li {position: relative;}
+.sf-menu ul {position: absolute; display: none; top: 100%; left: 0; z-index: 99;}
+.sf-menu > li {float: left;}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {display: block;}
+.sf-menu a {display: block; position: relative;}
+.sf-menu ul ul {top: 0; left: 100%;}
+.sf-menu ul {min-width: 12em; /* submenu width */}
+
+/* SUPERFISH THEME SKIN */
+
+.sf-menu {/*margin-right: -1em;*/ font-size: 14px; font-weight: 600;}
+.sf-menu.nav > li > a:hover, /* bs3 reset */
+.sf-menu.nav > li > a:focus /* bs3 reset */ {background-color: transparent;}
+.sf-menu.nav > li > a, /*bs3 reset */
+.sf-menu ul li > a {padding: 16px 15px 16px 15px;}
+.sf-menu ul li > a {padding: 8px 15px 8px 15px;}
+.is-sticky .sf-menu.nav > li > a,
+.is-sticky .sf-menu ul li > a {padding-top: 8px !important; padding-bottom: 8px !important;}
+.sf-menu .megamenu ul li > a {padding: 3px 15px 3px 15px;}
+
+.sf-menu a {color: @dark;}
+.sf-menu a:hover {color: @white;}
+.sf-menu li:hover,
+.sf-menu li.sfHover,
+.sf-menu li.sfHover > a,
+.sf-menu li.active {background-color: @dark; color: @white;}
+.sf-menu li.active > a {color: @white;}
+.sf-menu ul {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+}
+.sf-menu ul {margin-left: 0; padding-left: 0;}
+.sf-menu ul ul {margin-left: 0;}
+.sf-menu ul li {background: @white;}
+.sf-menu ul a {text-transform: none; font-weight: 400; text-decoration: none; color: @dark;}
+.sf-menu ul a:hover {color: @dark; background-color: @grayLighter;}
+
+/* ARROW DOWN */
+
+.sf-menu.nav > li > a.sf-with-ul, /* bs3 reset */
+.sf-arrows .sf-with-ul {padding-right: 1.8em;}
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -1px;
+  height: 0;
+  width: 0;
+  border: 3px solid transparent;
+  border-top-color: @gray;
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: @color;
+}
+
+/* ARROW RIGHT */
+
+.sf-arrows ul .sf-with-ul:after {
+  margin-top: -5px;
+  margin-right: -3px;
+  border-color: transparent;
+  border-left-color: @gray;
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-left-color: @color;
+}
+
+.sf-menu li li:hover,
+.sf-menu li li.sfHover,
+.sf-menu li li.sfHover > a,
+.sf-menu li li.active {background-color: @white;}
+
+.sf-menu li ul ul {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.sf-menu li.megamenu {
+  position: inherit !important;
+  //> .row {margin: 0;}
+  > ul {
+    //display: block !important;
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    li {
+      &.row {
+        color: @grayDark !important;
+        padding: 15px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 0;
+        div[class*="col-"] {margin-top: 0;}
+      }
+      ul {
+        display: block;
+        position: relative;
+        left: 0;
+        margin-left: 0;
+      }
+      a {
+        background-color: transparent;
+      }
+    }
+  }
+  ul {
+    margin-left: 0;
+  }
+  ul a {
+    padding-left: 0;
+    //    color: @gray;
+    &:hover { color: @color;}
+  }
+  p {margin-bottom: 10px;}
+  .block-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    color: @dark;
+  }
+}
+.sf-menu li.sale a {
+  background-color: @color;
+  color: @white;
+}
+
+.menu-toggle {
+  display: none;
+  height: 40px;
+  @media (max-width: 991px) {
+    display: inline-block;
+    //    display: block; /*z-index: 2;*/
+    //    padding: 0;
+    //    margin: 0 0 0 15px;
+    //    float: right;
+    //    border: none;
+    .fa {
+      //      font-size: 15px;
+      //      line-height: 30px;
+      //      width: 30px;
+      //      height: 30px;
+      //      text-align: center;
+      //      color: @white !important;
+      //      background-color: @color;
+    }
+    .shrink & {
+      //top: 7px;
+    }
+  }
+  @media (max-width: 480px) {
+
+  }
+}
+
+.menu-toggle-close {
+  display: none;
+  @media (max-width: 991px) {
+    display: block;
+    width: 100%;
+    text-align: right;
+    .fa {
+      display: inline-block;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+      line-height: 28px;
+      color: @white !important;
+      background-color: @dark;
+      border: solid 1px @white;
+      border-radius: 15px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 11000;
+    border-left: solid 1px @dark;
+    background-color: @dark;
+    //    background-color: rgba(red(@dark), green(@dark), blue(@dark), .95) !important;
+  }
+  .navigation.closed {right: -250px;}
+  .navigation.opened {right: 0; overflow-y: scroll;}
+  .sf-menu {margin-right: 0; padding: 15px 0 15px 0;}
+  .sf-menu a {color: @white; &:hover {color:@black;}}
+  .sf-menu > li {float: none;}
+  .sf-menu > li > a {background-color: @dark; padding-top: 10px !important; padding-bottom: 10px !important;}
+  .sf-menu > li > a:hover {background-color: @white !important; color: @color;}
+  .sf-menu li.megamenu {color: @white;}
+  .sf-menu li.megamenu ul {margin-left: 0 !important; padding-right: 0 !important; padding-left: 0 !important;}
+  .sf-menu li.megamenu ul a {color: @white !important;}
+  .sf-menu li.megamenu .row {margin: 0 !important;}
+  .sf-menu li.megamenu > ul li.row {color: @grayLight !important;}
+  .sf-menu li.megamenu .block-title {color: @white !important; border-color: @white !important;}
+  .sf-menu li.megamenu div[class*="col-"] + div[class*="col-"] {margin-top: 10px !important;}
+  .sf-menu ul {display: block !important; opacity: 1 !important; position: relative;}
+  .sf-menu ul a {color: @white;}
+  .sf-menu ul li {background-color: transparent;}
+  //
+  .sf-menu li {float: none!important; display: block!important; width: 100%!important; margin-bottom: 10px !important;}
+  .sf-menu li a {float: none!important;}
+  .sf-menu ul {
+    position: static !important;
+    margin-left: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .sf-arrows .sf-with-ul:after {border-color: @white transparent transparent !important;}
+
+  .sf-menu li li:hover,
+  .sf-menu li li.sfHover,
+  .sf-menu li li.sfHover > a,
+  .sf-menu li li.active {background-color: transparent !important;}
+
+  //
+  .product-list .media-link {
+    text-align: left !important;
+    margin-bottom: 10px;
+  }
+  .product-list .price del {
+    color: @grayLight !important;
+  }
+  .rating span.star.active:before, .rating span.star:hover:before, .rating span.star:hover ~ span.star:before {
+    color: @grayLight !important;
+  }
+
+}

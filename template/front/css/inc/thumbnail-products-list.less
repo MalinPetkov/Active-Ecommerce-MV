@@ -1,0 +1,79 @@
+/* Products list view
+/* ========================================================================== */
+
+@import "vars";
+
+.products.list {
+  .thumbnail {
+    & + .thumbnail {
+      margin-top: 30px;
+    }
+    .caption {padding-top: 0;}
+    .caption-title {font-weight: 400; margin-bottom: 15px;}
+    .reviews {
+      color: @dark;
+      &:hover {
+        color: @color;
+      }
+    }
+    .overflowed {
+      margin-top: 5px;
+    }
+    .availability {
+      float: left;
+      strong {
+        color: @color;
+      }
+    }
+    .price {
+      float: right;
+      margin-bottom: 0;
+    }
+    .caption-text {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 15px 0;
+      margin: 15px 0;
+      border-top: solid 1px rgba(red(@dark),green(@dark),blue(@dark),.1);
+      border-bottom: solid 1px rgba(red(@dark),green(@dark),blue(@dark),.1);
+    }
+    .btn-wish-list {margin-left: 10px; margin-right: 0;}
+    .btn-compare {}
+  }
+}
+.products-wall-wrapper {
+
+}
+.products.wall {
+  width: 1980px;
+  height: 550px; margin-top: -10px; margin-left: auto; margin-right: auto; overflow: hidden;
+  .isotope-item {margin-top: 10px; margin-right: 10px; float: left;}
+  .col {margin-right: 10px; float: left;}
+  .w270 {width: 270px; padding: 0;}
+  .w370 {width: 370px; padding: 0;} //550
+  .caption.hovered {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(red(@dark), green(@dark), blue(@dark), .6);
+  }
+  .caption-title {&, a {color: @white;}}
+  .rating {
+    & span.star:before {
+      content: "\f005";
+      color: @gray;
+    }
+    & span.star.active:before,
+    & span.star:hover:before,
+    & span.star:hover ~ span.star:before {
+      content: "\f005";
+      color: @white;
+    }
+  }
+  .price {
+    ins {color: @white; font-size: 15px;}
+    del {color: @white; font-size: 14px;}
+  }
+  .buttons {
+    .btn {color: @white; padding: 7px 9px;}
+  }
+}

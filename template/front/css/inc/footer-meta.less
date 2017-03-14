@@ -1,0 +1,36 @@
+/* Footer meta
+/* ========================================================================== */
+
+@import "vars";
+
+.footer-meta {
+  padding: 30px 0;
+  background-color: @white;
+  border-top: solid 1px #a1b1bc;
+  .copyright {
+    color: #a1b1bc;
+  }
+  .payments {
+    text-align: right;
+    @media (max-width: 767px) {
+      padding-top: 10px;
+      text-align: left;
+    }
+    ul {
+      display: inline-block;
+      padding: 0;
+      margin: -10px 0 0 0;
+      line-height: 1;
+      li {
+        float: left;
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        @media (max-width: 767px) {
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

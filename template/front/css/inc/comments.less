@@ -1,0 +1,109 @@
+/* Comments
+/* ========================================================================== */
+
+@import "vars";
+
+.comments {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .media + .media {
+    margin-top: 20px;
+  }
+}
+.comment {
+  border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+  padding: 20px;
+}
+.comment-avatar {
+  img {
+    width: 70px;
+  }
+}
+.pull-left.comment-avatar {
+  margin-right: 10px;
+}
+.pull-right.comment-avatar {
+  margin-left: 10px;
+}
+@media (max-width: 479px) {
+  .comment-avatar img {
+    width: 24px;
+    height: auto;
+  }
+}
+.comment-meta {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 1px;
+    background-color: @grayDark;
+  }
+}
+.comment-author {
+  font-size: 15px;
+  font-weight: 700;
+  color: @dark;
+  a {color: @dark;}
+  a:hover {color: @color;}
+}
+.comment-date {
+  float: right;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @gray;
+  .fa {color: @color; margin-left: 10px;}
+}
+.comment-text {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.comment-reply {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 0;
+  background-color: @light;
+  color: @gray;
+  a {color: @gray;}
+  a:hover {color: @dark;}
+  .fa {color: @dark; float: right;}
+}
+.comments-form {
+  padding: 20px 20px 0 20px;
+  border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+  > .block-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    height: 50px;
+    color: @dark;
+    border-color: @light;
+    background-color: @light;
+    &:focus {
+      border-color: @dark;
+    }
+  }
+  textarea.form-control {
+    height: 200px;
+  }
+  ::-webkit-input-placeholder {color: @dark !important;}
+  :-moz-placeholder {color: @dark !important;} // /* Firefox 18- */
+  ::-moz-placeholder {color: @dark !important;} // /* Firefox 19+ */
+  :-ms-input-placeholder {color: @dark !important;}
+}

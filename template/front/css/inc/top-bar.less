@@ -1,0 +1,107 @@
+/* Top bar
+/* ========================================================================== */
+
+@import "vars";
+
+.top-bar {
+  padding: 5px 0;
+  font-size: 13px;
+  background-color: @dark;
+  color: @white;
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-right: 20px;
+      @media (max-width: 991px) {
+        margin-right: 5px;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: @white;
+      &:hover {
+        span {
+          border-bottom: solid 1px @white;
+        }
+        .fa {
+          color: @color;
+        }
+      }
+      span.colored {
+        color: @color;
+        margin-left: 5px;
+      }
+      @media (max-width: 991px) {
+        span {
+          display: none;
+        }
+      }
+    }
+    .dropdown-menu {
+      -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+      border-radius: 0;
+      li {
+        margin-right: 0;
+      }
+      a {
+        color: @dark;
+        padding: 3px 10px;
+      }
+      a:hover {
+        border-bottom: none;
+      }
+    }
+    .fa {
+      margin-right: 5px;
+    }
+    .dropdown-toggle .fa {
+      margin: 0 0 0 5px;
+    }
+  }
+  .top-bar-left {
+    float: left;
+  }
+  .top-bar-right {
+    float: right;
+    > ul {
+      > li {
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
+      > li + li {
+        padding: 0 0 0 10px;
+        margin: 0 0 0 9px;
+      }
+      > li + li:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 1px;
+        height: 8px;
+        background-color: @white;
+      }
+    }
+  }
+  .icon-user {img {margin-top: -3px; margin-right: 5px;}}
+  .icon-form {img {margin-top: -5px; margin-right: 5px;}}
+  .dropdown.currency {
+    .dropdown-menu {
+      min-width: 80px;
+    }
+  }
+  .dropdown.flags {
+    > a {
+      img {
+        margin-top: -3px;
+      }
+    }
+    .dropdown-menu {
+      min-width: 75px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+/* Helper classes
+/* ========================================================================== */
+
+@import "vars";
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .col-xsp-4, .col-xsp-6, .col-xsp-8 {float: left;}
+  .col-xsp-4 {width: 33.33333333%;}
+  .col-xsp-6 {width: 50%;}
+  .col-xsp-8 {width: 66.66666667%;}
+  .col-xsp-offset-3 {margin-left: 25%;}
+}
+@media (min-width: 1200px) {
+  .text-left-lg {text-align: left;}
+  .text-right-lg {text-align: right;}
+  .text-center-lg {text-align: center;}
+}
+@media (min-width: 992px) {
+  .text-left-md {text-align: left;}
+  .text-right-md {text-align: right;}
+  .text-center-md {text-align: center;}
+}
+
+@media (min-width: 768px) {
+  .text-left-sm {text-align: left;}
+  .text-right-sm {text-align: right;}
+  .text-center-sm {text-align: center;}
+}
+
+.text-uppercase {text-transform: uppercase;}
+
+.margin-top {margin-top: 50px;}
+.margin-bottom {margin-bottom: 50px;}
+
+.clear {clear: both;}
+
+.inline-block {
+  display: inline-block !important;
+}
+.overflowed {
+  overflow: hidden;
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+
+.vhidden {visibility: hidden;}
+.visible {visibility: visible;}
+
+
+.div-table,
+.div-cell {
+  height: 100% !important;
+  display: table !important;
+}
+.div-cell {
+  display: table-cell !important;
+  vertical-align: middle !important;
+  float: none !important;
+}
+.div-table.full-width {
+  width: 100%;
+}
+.row.div-table {margin: 0;}
+@media (max-width: 767px) {
+  .row.div-table .div-cell {display: block !important;}
+}
+.div-cell.dark {}
+.div-cell.light {}
+.div-cell.color {}
+.div-cell.va-top {vertical-align: top !important;}
+.div-cell.padding-top {padding-top: 15px;}
+.div-cell.padding-bottom {padding-top: 15px;}
+
+
+/* Remove firefox dotted line
+/* -------------------------------------------------------------------------- */
+
+a,
+a:active,
+a:focus,
+input,
+input:active,
+input:focus,
+button,
+button:active,
+button:focus,
+select,
+select:active,
+select:focus,
+.bootstrap-select .btn,
+.bootstrap-select .btn:active,
+.bootstrap-select .btn:focus {
+  outline: 0 !important;
+}
+
+/* Remove webkit outline glow
+/* -------------------------------------------------------------------------- */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

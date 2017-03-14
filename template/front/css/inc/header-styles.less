@@ -1,0 +1,414 @@
+/* Header styles
+/* ========================================================================== */
+
+@import "vars";
+
+.sf-menu.nav > li > a:hover,
+.sf-menu.nav > li > a:focus {
+  background-color: @dark;
+}
+
+.sf-menu li.megamenu > ul li ul li {
+  display: inline-block;
+  width: 85%;
+}
+
+/* ================HEADER STYLE-1 CSS START==================== */
+
+.header-style-1 .sf-menu.nav > li > a:hover,
+.header-style-1 .sf-menu.nav > li > a:focus {
+  background-color: @white;
+}
+.header-style-1 .logo {
+  margin: 0;
+}
+.header-style-1 .header .header-search {
+  left: auto;
+  right: 25%;
+  top: 0;
+}
+.header-style-1 .navigation .nav.sf-menu {
+  display: inline;
+}
+.header-style-1 .header .navigation-wrapper, .header-nav-1 .sf-menu ul li,
+.header-nav-1 .sf-menu .megamenu li.sfHover{
+  background-color: #232323;
+}
+.header-nav-1 .sf-menu a , .header-nav-1 .sf-menu li.megamenu .block-title{
+  color: #fff;
+}
+.header-nav-1 .sf-menu > li:hover, .header-nav-1 .sf-menu li.active,.header-nav-1 .sf-menu > li.active.sfHover > a,
+.header-nav-1 .sf-menu ul a:hover{
+  color: #232323;
+  background-color: #fff ;
+}
+
+.header-nav-1 .sf-menu .megamenu li a:hover, .header-nav-1 .sf-menu .megamenu li a:focus,.header-nav-1  .megamenu .sf-menu > li.active a,
+.header-nav-1 .sf-menu li li.sfHover > a, .header-nav-1 .sf-menu li li.active{
+  background: transparent;
+}
+.header-nav-1 .sf-menu a:hover, .header-nav-1 .sf-menu li.active > a{
+  color: #232323;
+}
+
+
+@media (max-width: 480px) {
+  .header-style-1 .logo {
+    margin:  auto auto 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+  .header-style-1 .header .header-search{
+    right: 30%;
+  }
+}
+@media (max-width: 991px) {
+  .header-nav-1 .sf-menu li{
+    margin-bottom: 0 !important;
+  }
+  .header-nav-1 .sf-menu > li:hover, .header-nav-1 .sf-menu li.active    {
+    background: transparent;
+  }
+}
+/* ================HEADER STYLE-1 CSS END==================== */
+
+
+/* ================HEADER STYLE-2 CSS START==================== */
+
+.header-style-2 .top-bar .top-bar-left {
+  float: right;
+}
+.header-style-2 .top-bar .top-bar-right {
+  float: left;
+}
+.header-style-2 .top-bar .top-bar-left  ul li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+.header-style-2 .top-bar-left  ul li:last-child{
+  padding-right: 0;
+}
+.header-style-2 .top-bar ul {
+  margin-left: 0;
+}
+
+.header-style-2 .header .header-search{
+  left: auto;
+  right: 15px;
+}
+.header-style-2 .header .header-cart {
+  left: 15px;
+  right: auto;
+}
+.header-style-2 .cart-wrapper {
+  margin-left: 0;
+}
+
+.header-style-2 .header {
+  border-bottom: medium none;
+}
+.header-style-2 .header .navigation-wrapper{
+  background-color: #fff;
+  border-bottom: 1px solid #d3d5d7;
+}
+.header-style-2 .navigation .nav.sf-menu {
+  /*    display: inline;*/
+}
+.header-nav-2 .sf-menu > li:hover,.header-nav-2 .sf-menu > li:hover > a, .header-nav-2 .sf-menu li.active, .header-nav-2 .sf-menu > li.sfHover,
+.header-nav-2 .sf-menu > li.sfHover > a{
+  color: #fff;
+}
+.header-nav-2  .sf-menu ul a:hover{
+  color: #fff;
+}
+.header-nav-2 .sf-menu li.megamenu ul a:hover{
+  background: transparent;
+}
+.header-nav-2 .sf-arrows > li > .sf-with-ul:focus::after,
+.header-nav-2 .sf-arrows > li:hover > .sf-with-ul::after,
+.header-nav-2 .sf-arrows > li.active > .sf-with-ul::after,
+.header-nav-2 .sf-arrows > .sfHover > .sf-with-ul::after{
+  border-top-color: #ffffff;
+}
+.header-nav-2 .sf-menu a:hover{
+  color: #232323;
+}
+@media (max-width: 480px){
+  .header-style-2 .top-bar .top-bar-left ul li{
+    margin-left: 10px;
+  }
+  .header-style-2 .header .header-cart{
+    left: 0;
+  }
+}
+@media (max-width: 767px){
+
+}
+/* ================HEADER STYLE-2 CSS END==================== */
+
+
+
+/* ================HEADER STYLE-3 CSS START==================== */
+
+.header-style-3 .logo{
+  float: left;
+  padding-top: 13px;
+}
+.header-nav-3{
+  float: right;
+}
+.header-style-3 .top-bar .top-bar-left {
+  float: right;
+}
+.header-style-3 .top-bar .top-bar-right {
+  float: left;
+}
+.header-style-3 .top-bar .top-bar-left  ul li {
+  margin-left: 20px;
+  margin-right: 0;
+}
+.header-style-3 .top-bar-left  ul li:last-child{
+  padding-right: 0;
+}
+.header-style-3 .top-bar ul {
+  margin-left: 0;
+}
+
+.header-style-3 .header .header-search{
+  left: auto;
+  right: 15px;
+}
+.header-style-3 .header .header-cart {
+  left: 15px;
+  right: auto;
+}
+.header-style-3 .cart-wrapper {
+  margin-left: 0;
+}
+
+.header-style-3 .header {
+  border-bottom: medium none;
+}
+.header-style-3 .header .navigation-wrapper{
+  background-color: #fff;
+  border-bottom: 1px solid #d3d5d7;
+}
+.header-style-3 .navigation .nav.sf-menu {
+  /*    display: inline;*/
+}
+.header-nav-3 .sf-menu > li:hover,.header-nav-3 .sf-menu > li:hover > a, .header-nav-3 .sf-menu li.active, .header-nav-3 .sf-menu > li.sfHover,
+.header-nav-3 .sf-menu > li.sfHover > a{
+  color: #fff;
+}
+.header-nav-3  .sf-menu ul a:hover{
+
+  color: #fff;
+}
+.header-nav-3 .sf-menu li.megamenu ul a:hover{
+  background: transparent;
+}
+.header-nav-3 .sf-arrows > li > .sf-with-ul:focus::after,
+.header-nav-3 .sf-arrows > li:hover > .sf-with-ul::after,
+.header-nav-3 .sf-arrows > li.active > .sf-with-ul::after,
+.header-nav-3 .sf-arrows > .sfHover > .sf-with-ul::after{
+  border-top-color: #ffffff;
+}
+.header-nav-3 .sf-menu a:hover{
+  color: #232323;
+}
+@media (max-width: 480px){
+  .header-style-3 .top-bar .top-bar-left ul li{
+    margin-left: 10px;
+  }
+  .header-style-3 .header .header-cart{
+    left: 0;
+  }
+
+}
+@media (max-width: 991px){
+  .header-style-3 .logo {
+    float: none;
+    padding-top: 5px;
+  }
+  .header-style-3  .header .navigation-wrapper{
+    border-top:none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .header-style-3 .logo{
+    position: absolute;
+    top: 22px;
+    left: 37%;
+    float: none;
+  }
+  .header-style-3 .header{
+    position: relative;
+  }
+  .header-nav-3 {
+    float: none;
+  }
+}
+/* ================HEADER STYLE-3 CSS END==================== */
+
+
+/* ================HEADER STYLE-4 CSS START==================== */
+.header-nav-4 .nav.sf-menu {
+  display: inline;
+}
+.header-nav-4{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-style-4 .logo{
+  margin: 0;
+}
+.header-style-4 .header .header-search{
+  left: auto;
+  right: 15px;
+}
+
+.header-style-4 .header .navigation-wrapper, .header-nav-4 .sf-menu ul li,
+.header-nav-4 .sf-menu .megamenu li.sfHover{
+  background-color: #232323;
+}
+.header-nav-4 .sf-menu a , .header-nav-4 .sf-menu li.megamenu .block-title{
+  color: #a6a7a8 ;
+}
+.header-nav-4 .sf-menu > li:hover, .header-nav-4 .sf-menu li.active,.header-nav-4 .sf-menu > li.active.sfHover > a,
+.header-nav-4 .sf-menu ul a:hover{
+  color: #fff;
+  background-color: transparent ;
+}
+
+.header-nav-4 .sf-menu .megamenu li a:hover, .header-nav-4 .sf-menu .megamenu li a:focus,.header-nav-4  .megamenu .sf-menu > li.active a,
+.header-nav-4 .sf-menu li li.sfHover > a, .header-nav-4 .sf-menu li li.active{
+  background: transparent;
+}
+.header-nav-4 .sf-menu a:hover, .header-nav-4 .sf-menu li.active > a{
+  color: #fff;
+}
+
+.header-nav-4 .sf-menu li.megamenu ul a:hover{
+  color: #fff;
+}
+
+.header-nav-4 .sf-arrows > li > .sf-with-ul:focus::after,
+.header-nav-4 .sf-arrows > li:hover > .sf-with-ul::after,
+.header-nav-4 .sf-arrows > li.active > .sf-with-ul::after,
+.header-nav-4 .sf-arrows > .sfHover > .sf-with-ul::after{
+  border-top-color: #ffffff;
+}
+@media (min-width: 481px) and (max-width: 991px){
+  .header-style-4 .logo {
+    margin: 0 auto;
+  }
+  .header-style-4 .header .header-search {
+    right: auto;
+    left: 15px;
+  }
+}
+
+@media (min-width: 1200px){
+  .header-style-4 .cart-wrapper {
+    float: right;
+    margin: 9px 0 0;
+  }
+  .header-style-4 .btn-theme-transparent, .header-style-4 .btn-theme-transparent:focus, .header-style-4 .btn-theme-transparent:active{
+    border-color: #a6a7a8;
+    color: #a6a7a8;
+    background: transparent;
+  }
+  .header-style-4 .btn-theme-transparent:hover{
+    border-color: #fff;
+    color: #fff;
+    background: transparent;
+  }
+
+}
+@media (max-width: 480px){
+  .header-style-4 .logo {
+    margin: auto auto 30px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .header-style-4 .header .header-cart {
+    right: 300px;
+  }
+}
+/* ================HEADER STYLE-4 CSS END==================== */
+
+
+/* ================HEADER STYLE-5 CSS START==================== */
+.header-style-5 .header .header-search {
+  left: 290px;
+}
+.header-style-5 .header .header-cart {
+  left: 15px;
+  right: auto;
+}
+.header-style-5 .cart-wrapper {
+  margin-left: 0px;
+}
+.header-style-5 .logo{
+  float: right;
+}
+.header-nav-5 .sf-menu > li:hover, .header-nav-5 .sf-menu li.active > a, .header-nav-5 .sf-menu a:hover, .header-nav-5 .sf-menu li.active,
+.header-nav-5 .sf-menu > li.active.sfHover > a, .header-nav-5 .sf-menu ul a:hover,.sf-menu li:hover, .header-nav-5 .sf-menu li.sfHover,
+.header-nav-5 .sf-menu li.sfHover > a{
+  background: transparent;
+}
+.header-nav-5 .sf-menu li.megamenu > ul li.sfHover{
+  background: #fff;
+}
+@media (max-width: 480px){
+  .header-style-5 .header .header-cart{
+    left: 0;
+  }
+  .header-style-5 .logo {
+    float: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .header-style-5 .header .header-search {
+    left: 230px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px){
+  .header-style-5 .header .header-search {
+    left: 130px;
+  }
+}
+/* ================HEADER STYLE-5 CSS END==================== */
+
+
+
+/* ================HEADER MULTICOLOR CSS START==================== */
+.header-nav-1 .sf-arrows > li > .sf-with-ul:focus::after,
+.header-nav-1 .sf-arrows > li:hover > .sf-with-ul::after,
+.header-nav-1 .sf-arrows > li.active > .sf-with-ul::after,
+.header-nav-1 .sf-arrows > .sfHover > .sf-with-ul::after{
+  border-top-color: @color;
+}
+.header-nav-5 .sf-menu > li:hover, .header-nav-5 .sf-menu li.active > a, .header-nav-5 .sf-menu a:hover, .header-nav-5 .sf-menu li.active,
+.header-nav-5 .sf-menu > li.active.sfHover > a, .header-nav-5 .sf-menu ul a:hover,.sf-menu li:hover, .header-nav-5 .sf-menu li.sfHover,
+.header-nav-5 .sf-menu li.sfHover > a{
+  color: @color;
+}
+.header-nav-2 .sf-menu > li:hover,.header-nav-2 .sf-menu > li:hover > a, .header-nav-2 .sf-menu li.active, .header-nav-2 .sf-menu > li.sfHover,
+.header-nav-2 .sf-menu > li.sfHover > a{
+  background-color: @color;
+}
+.header-nav-2  .sf-menu ul a:hover{
+  background-color: @color;
+}
+.header-nav-3 .sf-menu > li:hover,.header-nav-3 .sf-menu > li:hover > a, .header-nav-3 .sf-menu li.active, .header-nav-3 .sf-menu > li.sfHover,
+.header-nav-3 .sf-menu > li.sfHover > a{
+  background-color: @color;
+}
+.header-nav-3  .sf-menu ul a:hover{
+  background-color: @color;
+}
+/* ================HEADER MULTICOLOR CSS END==================== */
+
+

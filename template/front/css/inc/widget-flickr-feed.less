@@ -1,0 +1,73 @@
+/* flickr feed
+/* ========================================================================== */
+
+@import "vars";
+
+.widget-flickr-feed {
+  ul {
+    overflow: hidden;
+    margin-left: -10px;
+    margin-bottom: -10px;
+
+    li {
+      float: left;
+      margin: 0 0 10px 10px;
+    }
+    a {
+      display: block;
+      border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+      overflow: hidden;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
+        bottom: 0; right: 0;
+        background-color: transparent;
+      }
+      &:after {
+        content: '\f002';
+        font-size: 14px;
+        font-family: @fontFamilyFA;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        margin-left: -7px;
+        margin-top: -9px;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        color: @white;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+      &:hover {
+        border-color: @color;
+        &:before {
+          background-color: rgba(red(@color),green(@color),blue(@color),.7);
+        }
+        &:after {
+          opacity: 1;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+    a img {
+      width: 74px;
+      height: auto;
+      @media (max-width: 1199px) {
+        width: 58px;
+      }
+      @media (max-width: 991px) {
+        width: 70px;
+      }
+      @media (max-width: 767px) {
+        width: 70px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,32 @@
+/* Footer widgets
+/* ========================================================================== */
+
+@import "vars";
+
+.footer-widgets {
+  padding: 80px 0;
+  margin-top: -50px;
+  background-color: transparent;
+  .widget {
+    margin-top: 50px;
+  }
+  .widget-title {
+    margin-top: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: @dark;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: #a3a4a5;
+    }
+  }
+}

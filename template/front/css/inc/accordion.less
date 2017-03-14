@@ -1,0 +1,65 @@
+/* Accordions / FAQ
+/* ========================================================================== */
+
+@import "vars";
+
+.accordion {
+  margin-bottom: 30px;
+  border-top: solid 1px @grayLighter;
+  .panel {
+    border: none;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: solid 1px @grayLighter;
+  }
+  .panel-heading {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .panel-title {
+    font-size: 18px;
+    line-height: 22px;
+    color: @dark;
+    font-weight: 700;
+    .collapsed {
+      font-weight: 400;
+    }
+    a {
+      display: inline-block;
+    }
+    .overflowed {
+      margin-top: -2px;
+      img {margin-left: 5px;}
+    }
+  }
+  .panel-body {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 17px;
+  }
+  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border: none;
+  }
+  .dot {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+    &:before {
+      content: '\f068';
+      font-family: @fontFamilyFA;
+    }
+  }
+  .collapsed .dot:before {
+    content: '\f067';
+  }
+  .alert {
+    margin-bottom: 0;
+    color: @dark;
+  }
+}

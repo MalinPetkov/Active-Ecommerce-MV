@@ -1,0 +1,32 @@
+/* Back to top button
+/* ========================================================================== */
+
+@import "vars";
+
+.to-top {
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-color: transparent;
+  background-color: rgba(red(@color), green(@color), blue(@color), .5);
+  border: solid 2px @color;
+  color: @white;
+}
+
+.to-top:hover {
+  background-color: @white;
+  border-color: @color;
+  color: @color;
+}

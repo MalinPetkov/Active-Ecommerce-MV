@@ -1,0 +1,498 @@
+/* Thumbnail product
+/* ========================================================================== */
+
+@import "vars";
+
+.thumbnail {
+  .rating {
+    display: inline-block;
+    font-size: 13px;
+    span.star:before {
+      padding-right: 3px;
+    }
+  }
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    del {
+      font-weight: normal;
+      font-size: 14px;
+      color: @dark;
+    }
+    ins {
+      padding-right: 5px;
+      text-decoration: none;
+      color: @color;
+    }
+  }
+  .buttons {
+    .btn {
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 18px;
+      .fa,
+      .glyphicon {
+        font-size: 16px !important;
+      }
+    }
+    .btn-wish-list {margin-right: 10px;}
+    .btn-compare {margin-left: 10px;}
+  }
+
+  .btn-wish-list {opacity: 0;}
+  .btn-compare {opacity: 0;}
+  &.hover,
+  &:hover {
+    .btn-wish-list {opacity: 1;}
+    .btn-compare {opacity: 1;}
+  }
+  // category
+  &.category {
+    .media-link:after {
+      content: '';
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 0; left: 0;
+      bottom: 0; right: 0;
+    }
+    // caption
+    .caption {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      top: 0; left: 0;
+      bottom: 0; right: 0;
+      padding: 0;
+    }
+    .caption-wrapper {padding: 5px;}
+    .caption-inner {padding: 0;}
+    .sale {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 40px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      color: @white;
+    }
+    .caption-title {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      color: @white;
+    }
+    .items {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-style: italic;
+      color: @white;
+    }
+    // animation
+    & {
+      .media img {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition-duration: .4s;
+        transition-duration: .4s;
+        position: relative;
+      }
+      span {
+        padding: 0 8px;
+        background-color: rgba(0,0,0,.0);
+      }
+      .btn-theme {
+        border-width: 1px;
+        border-color: @white;
+        color: @white;
+      }
+      .media-link:after {
+        background-color: rgba(0,0,0,.25);
+      }
+    }
+    &.hover,
+    &:hover {
+      .media img {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      span {
+        color: @white;
+        background-color: rgba(0,0,0,.50);
+      }
+      .btn-theme {
+        border-color: @white;
+        background-color: @white;
+        color: @dark;
+      }
+      .media-link:after {
+        background-color: rgba(0,0,0,.0);
+      }
+    }
+  }
+}
+
+// OwlCarousel
+.top-products-carousel {
+  .buttons {
+    .btn {padding: 5px; font-size: 10px;}
+    .btn-wish-list {margin-right: 5px;}
+    .btn-compare {margin-left: 5px;}
+  }
+}
+//
+.top-products-carousel .owl-theme .owl-controls {margin-top: 0;}
+.top-products-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.top-products-carousel .owl-theme .owl-controls .owl-dots {line-height: 1;}
+.top-products-carousel .owl-prev,
+.top-products-carousel .owl-next {
+  position: absolute;
+  top: 50%;
+  border: solid 3px @grayLighter;
+  color: @grayLighter;
+  height: 37px;
+  width: 37px;
+  line-height: 37px;
+  text-align: center;
+}
+.top-products-carousel .owl-prev {left: -50px; margin-top: -16px !important;}
+.top-products-carousel .owl-next {right: -50px; margin-top: -16px !important;}
+.top-products-carousel .owl-prev .fa,
+.top-products-carousel .owl-next .fa {
+  color: @grayLighter;
+  font-size: 24px !important;
+  line-height: 30px;
+}
+.top-products-carousel .owl-prev:hover,
+.top-products-carousel .owl-next:hover {
+  border-color: @black;
+  color: @black;
+}
+.top-products-carousel .owl-prev:hover .fa,
+.top-products-carousel .owl-next:hover .fa {
+  color: @black;
+}
+
+// single product
+
+.product-single {
+
+  //
+
+  .badges {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    width: 50px;
+    z-index: 2;
+    div {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 20px;
+      margin-bottom: 10px;
+      border: solid 3px @dark;
+      text-transform: uppercase;
+      text-align: center;
+      color: @dark;
+      &.hot {
+        border-color: @error;
+        color: @error;
+      }
+    }
+  }
+
+  //
+  .btn-zoom {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2;
+    padding: 0;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: rgba(red(@white),green(@white),blue(@white),.2);
+    border-color: @white;
+    color: @white;
+    .fa {
+      width: 30px;
+    }
+    &:hover {
+      background-color: rgba(red(@dark),green(@dark),blue(@dark),.9);
+      border-color: @dark;
+      color: @white;
+    }
+  }
+
+  // owl styles
+  .owl-theme {
+    .owl-item {}
+    .owl-controls {
+      margin: 0 !important;
+      @media (max-width: 639px) {
+        display: none;
+      }
+      // nav
+      .owl-nav {
+        [class*=owl-] {
+          position: absolute;
+          top: 50%;
+          margin: -20px 0 0 0;
+          padding: 0;
+          width: 40px;
+          height: 40px;
+          border-radius: 0;
+          font-size: 30px;
+          line-height: 30px;
+          border: solid 3px @dark;
+          background: transparent;
+          color: @dark;
+          &:hover {
+            background: @dark;
+            color: @white;
+          }
+        }
+        .owl-prev {left: 30px;}
+        .owl-next {right: 30px;}
+      }
+      // dots
+      .owl-dots {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        .owl-dot span {
+          background-color: @gray;
+        }
+        .owl-dot:hover span,
+        .owl-dot.active span {
+          background-color: @dark;
+        }
+      }
+      //
+    }
+  }
+
+  .product-thumbnails {
+    margin-left: 0;
+    margin-right: -10px;
+    > div {padding: 0;}
+    a {
+      display: block;
+      margin: 10px 10px 0 0;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  //
+  .back-to-category {
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px @grayLight;
+
+    .link {
+      display: inline-block;
+      margin-top: 12px;
+      color: @dark;
+    }
+
+    .btn-previous,
+    .btn-next {
+      padding: 0;
+      font-size: 30px;
+      line-height: 30px;
+      color: #e9e9e9;
+      .fa {
+        width: 30px;
+      }
+    }
+    .btn-next {margin-left: 9px;}
+  }
+
+  //
+  .product-title {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: normal;
+    color: @dark;
+  }
+  .product-rating {
+    .rating {
+      float: left;
+      margin-right: 15px;
+      @media (max-width: 767px) {
+        float: none;
+        display: block;
+        margin-right: 0;
+      }
+    }
+  }
+  .reviews,
+  .add-review {
+    color: @dark;
+    &:hover {
+      color: @color;
+    }
+  }
+  .product-availability {
+    color: @dark;
+    strong {
+      color: @color;
+    }
+  }
+  .product-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .product-price {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+    color: @dark;
+  }
+  .product-qty {
+    margin-bottom: 15px;
+    .form-control.qty {
+      height: 36px;
+      width: 50px;
+      text-align: center;
+      margin-right: 5px;
+    }
+    .form-group {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .form-control {display: inline-block !important;}
+    label {
+      display: block; float: left;
+      line-height: 35px;
+      margin-right: 5px;
+    }
+    .btn {
+      vertical-align: top;
+    }
+  }
+  form.variable {
+    label {
+      text-transform: uppercase;
+      color: @dark;
+    }
+    .filter-option {
+      color: @dark;
+      font-size: 11px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+  }
+  .buttons {
+    margin-top: -10px;
+    overflow: hidden;
+    .quantity {
+      overflow: hidden;
+      float: left;
+      margin-right: 5px;
+      .btn {
+        margin-top: 10px;
+        float: left;
+        margin-right: 1px;
+        background-color: @dark;
+        color: @grayDark;
+        height: 60px;
+        &:hover {
+          color: @white;
+        }
+      }
+      .qty {
+        margin-top: 10px;
+        float: left;
+        margin-right: 1px;
+        width: 40px;
+        height: 60px;
+        background-color: @dark;
+        border-color: @dark;
+        color: @white;
+      }
+    }
+    .btn-cart {
+      float: left;
+      margin-top: 10px;
+      margin-right: 5px;
+      max-width: 100%;
+      background-color: @dark;
+      border-color: @dark;
+      border-width: 3px;
+      color: @white;
+      height: 60px;
+      width: 270px;
+      &:hover {
+        background-color: transparent;
+        color: @dark;
+      }
+    }
+    .btn-wish-list,
+    .btn-compare {
+      float: left;
+      margin-top: 10px;
+      margin-right: 5px;
+      width: 60px;
+      height: 60px;
+      border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+      background-color: transparent;
+      color: @dark;
+      &:hover {
+        background-color: @dark;
+        color: @white;
+      }
+    }
+  }
+  .quantity {}
+  table {
+    .title {
+      color: @dark;
+    }
+    td {
+      padding: 0 10px 0 0;
+    }
+  }
+  .social-icons {
+    a {
+      border-width: 2px;
+      line-height: 25px;
+    }
+  }
+}
+
+//
+
+.bootstrap-select.btn-group .dropdown-menu {
+//  border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+//  border: solid 3px #f3f2f0;
+  border-width: 3px;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus {
+  background-color: @color;
+}

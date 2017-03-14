@@ -1,0 +1,45 @@
+/* Shop info banners
+/* ========================================================================== */
+
+@import "vars";
+
+.shop-info-banners {
+  .block {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 15px 17px;
+    border: solid 4px @grayDarker;
+    background-color: transparent;
+    color: @grayDarker;
+    font-weight: 500;
+    line-height: 18px;
+    .fa {
+      font-size: 60px;
+      line-height: 60px;
+      color: @grayDarker;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    .media-heading {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 900;
+      color: @grayDarker;
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      color: @white;
+      background-color: @grayDarker;
+      .fa {
+        color: @white;
+      }
+      .media-heading {
+        color: @white;
+      }
+    }
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}

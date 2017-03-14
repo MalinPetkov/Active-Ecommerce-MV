@@ -1,0 +1,31 @@
+/* Widgets
+/* ========================================================================== */
+
+@import "vars";
+
+.widget-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @dark;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    position: relative;
+  }
+  span:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 2000px;
+    background-color: @gray;
+    top: 10px;
+  }
+  span:after {
+    left: 100%;
+    margin-left: 15px;
+  }
+}

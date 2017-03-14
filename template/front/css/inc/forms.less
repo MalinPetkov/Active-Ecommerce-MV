@@ -1,0 +1,165 @@
+/* Form / Input / Textarea / Select
+/* ========================================================================== */
+
+@import "vars";
+
+.form-control {
+  -webkit-appearance: none; /* ios */
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 40px;
+  border-radius: 0;
+  border: 3px solid #e9e9e9;
+  color: @textColor;
+  &:focus {
+    -webkit-appearance: none; /* ios */
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: @dark;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+// bootstrap-select
+.bootstrap-select {
+  .dropdown-menu {
+    border-radius: 0;
+    a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+.bootstrap-select > .selectpicker {
+  -webkit-appearance: none; /* ios */
+  -webkit-box-shadow: none;
+  box-shadow: none !important;
+  height: 40px;
+  border-radius: 0;
+  border: 3px solid #e9e9e9;
+  background-color: @white !important;
+  color: @textColor !important;
+  &:focus {
+    border-color: @dark;
+  }
+}
+.bootstrap-select-searchbox .form-control {
+  border-radius: 0;
+}
+.bootstrap-select .selectpicker > .filter-option {
+  color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 22px;
+}
+.alert {
+  border-radius: 0;
+}
+
+label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: @dark;
+}
+
+input[type=checkbox] {
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+// form-login
+.form-login {
+
+  //
+  .row {margin-top: -20px;}
+  .row + .row {margin-top: 0;}
+  .row div[class*="col-"],
+  .row aside[class*="col-"] {margin-top: 20px;}
+
+  .hello-text-wrap {
+    //margin-top: 8px !important;
+    line-height: 12px;
+  }
+  .hello-text {}
+
+  .btn-block {
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 992px) {
+      max-width: 100%;
+    }
+  }
+
+  .btn.facebook {background-color: #3e5c98; border-color: #3e5c98; color: @white;}
+  .btn.twitter {background-color: #22a9e0; border-color: #22a9e0; color: @white;}
+  .btn.facebook:hover,
+  .btn.twitter:hover {background-color: @dark; border-color: @dark;}
+  .btn-theme {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .form-group {margin-bottom: 0;}
+  .form-control {height: 50px;}
+  .checkbox {
+    font-size: 11px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: @dark;
+    label {
+      font-weight: 700 !important;
+    }
+    input[type=checkbox] {
+      margin-top: 2px;
+    }
+  }
+  .col-md-12.col-lg-6.text-right-lg {
+    line-height: 0;
+    @media (min-width: 1200px) {
+      margin-bottom: 2px;
+    }
+    @media (max-width: 1199px) {
+      margin-top: 0;
+    }
+  }
+
+  .forgot-password {
+    color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 18px;
+  }
+  .forgot-password:hover {border-bottom: solid 1px @dark;}
+
+  ::-webkit-input-placeholder {color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 22px;}
+  :-moz-placeholder {color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 22px;}
+  ::-moz-placeholder {color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 22px;}
+  :-ms-input-placeholder {color: @dark !important; font-weight: 700 !important; font-size: 11px; text-transform: uppercase; line-height: 22px;}
+
+}
+
+// create-account
+.create-account {
+
+  color: @dark;
+  .list-check {
+    font-weight: 700;
+  }
+
+  .row {margin-top: -20px;}
+  .row + .row {margin-top: 0;}
+  .row div[class*="col-"],
+  .row aside[class*="col-"] {margin-top: 20px;}
+
+  .hello-text-wrap {
+    //margin-top: 8px !important;
+    line-height: 12px;
+  }
+  .hello-text {}
+
+  .btn-theme {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .btn-create {
+    margin-top: 15px;
+  }
+}

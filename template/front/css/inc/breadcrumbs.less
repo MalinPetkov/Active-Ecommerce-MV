@@ -1,0 +1,62 @@
+/* Breadcrumbs
+/* ========================================================================== */
+
+@import "vars";
+
+.page-section.breadcrumbs {
+  background-color: @light;
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 1;
+
+  > .container {
+    text-align: center;
+  }
+
+  .breadcrumb {
+    position: relative;
+    padding: 20px 0 0 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: transparent;
+
+    a {
+      color: @dark;
+      &:hover {
+        border-bottom: solid 1px @dark;
+      }
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+    > li + li:before {
+      content: '\f105 ';
+      font-family: @fontFamilyFA;
+    }
+    >.active {
+      color: @dark;
+    }
+  }
+
+  // bs page-header
+  .page-header {
+
+    padding: 0;
+    margin: 40px 0 0 0;
+    border: none;
+
+    h1,
+    h1 small {
+      color: @dark;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 48px;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+/* My Account
+/* ========================================================================== */
+
+@import "vars";
+
+.information-title{
+  border-bottom: 3px solid @color;
+  background-color: #f5f6f7;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #232323;
+}
+.details-box > ul {
+  background-color: #f5f6f7;
+  padding: 20px 50px;
+}
+.details-box > ul li{
+  text-transform: capitalize;
+  padding-bottom: 5px;
+}
+.details-box > ul li a:before{
+  content: '\f0a9';
+  font-family: 'FontAwesome';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  padding-right: 10px;
+}
+.details-box > ul li a{
+  color: #232323;
+  display: block;
+  padding: 5px 0 5px 20px;
+  position: relative;
+}
+
+.details-box > ul li a:hover::before {
+  -webkit-animation: 0.4s ease 0s normal none 1 running bounceIn;
+  animation: 0.4s ease 0s normal none 1 running bounceIn;
+}
+.details-box label{
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.details-box form .btn-theme{
+  margin-top: 20px;
+}
+.details-box .table > thead > tr > th, .details-box .table > tbody > tr > th,
+.details-box .table > tfoot > tr > th, .details-box .table > thead > tr > td, .details-box .table > tbody > tr > td,
+.details-box .table > tfoot > tr > td{
+  vertical-align: middle;
+}
+.order-status{
+  text-align: right;
+}
+.details-box .status{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.details-box  .return-request {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.details-box .ratings > p {
+  margin: 10px 0;
+}
+.reviews h2{
+  color: #232323;
+  font-size: 30px;
+  font-weight: normal;
+  margin-top: 0;
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .details-box .order-status .btn-theme{
+    display: block;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px){
+  .details-box .order-status .btn-theme{
+    display: block;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px){
+  .orders table{
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.widget.account-details ul{
+  border: 3px solid rgba(35, 35, 35, 0.1);
+}
+.widget.account-details .widget-title{
+  padding: 10px 15px;
+  border-bottom: 3px solid @color;
+  background-color: #f5f6f7;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.widget.account-details li{
+  border-bottom: 1px solid rgba(35, 35, 35, 0.1);
+  padding: 10px 15px;
+  text-transform: uppercase;
+}
+.widget.account-details li a{
+  color:#232323;
+}
+.widget.account-details li.active a{
+  color: @color;
+}
+.widget.account-details li a:hover, .widget.account-details li a:focus,
+.details-box > ul li a:hover, .details-box > ul li a:focus{
+  color: @color;
+}

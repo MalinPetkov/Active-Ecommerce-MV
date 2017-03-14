@@ -1,0 +1,27 @@
+/* Logo
+/* ========================================================================== */
+
+@import "vars";
+
+.logo {
+  padding-top: 5px;
+  margin: 0 auto;
+  max-width: 255px;
+  height: auto;
+  img {
+    max-width: 100%;
+  }
+  .header-logo-left & {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    padding-top: 0;
+    margin-bottom: 30px;
+    .header-logo-left & {
+      margin-left: auto;
+    }
+  }
+}

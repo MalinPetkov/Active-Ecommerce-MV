@@ -1,0 +1,46 @@
+/* Thumbnail hot deal
+/* ========================================================================== */
+
+@import "vars";
+
+.thumbnail-hot-deal {
+  .caption {
+    padding-top: 30px;
+  }
+  .caption-title {
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .price {
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 900;
+    del {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+}
+
+//
+
+.hot-deals-carousel {
+  // owl styles
+  .owl-theme {
+    .owl-controls {
+      // dots
+      .owl-dots {
+        .owl-dot span {
+          background-color: @gray;
+          border-radius: 0;
+          margin-left: 1px;
+          margin-right: 2px;
+        }
+        .owl-dot:hover span,
+        .owl-dot.active span {
+          background-color: @dark;
+        }
+      }
+    }
+  }
+}

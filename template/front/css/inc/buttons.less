@@ -1,0 +1,188 @@
+/* Buttons
+/* ========================================================================== */
+
+@import "vars";
+
+// bs3 buttons
+.btn,
+.btn:hover,
+.btn:active,
+.btn.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+// main button style
+.btn-theme {
+  color: @white;
+  border-width: 3px;
+  background-color: @color;
+  border-color: @color;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  //
+  &:hover {
+    background-color: @dark;
+    border-color: @dark;
+    color: @white;
+  }
+  &.btn-block {
+    max-width: 450px;
+    //margin: 0 auto;
+  }
+  // icon position / margin
+  .icon-left {margin-right: 7px;}
+  .icon-right {margin-left: 7px;}
+}
+// transparent button
+.btn-theme-transparent,
+.btn-theme-transparent:focus,
+.btn-theme-transparent:active{
+  background-color: transparent;
+  border-width: 3px;
+  border-color: #e9e9e9;
+  color: @dark;
+}
+.btn-theme-transparent:hover {
+  background-color: @dark;
+  border-color: @dark;
+  color: @white;
+}
+// dark button
+.btn-theme-dark,
+.btn-theme-dark:focus,
+.btn-theme-dark:active{
+  background-color: @dark;
+  border-width: 3px;
+  border-color: @dark;
+  color: @white;
+}
+.btn-theme-dark:hover {
+//  background-color: @white;
+//  border-color: #e9e9e9;
+//  color: @dark;
+  background-color: @color;
+  border-color: @color;
+  color: @white;
+}
+// button sizes
+.btn-theme-xs {
+  font-size: 11px;
+  padding: 7px 12px;
+}
+.btn-theme-sm {
+  font-size: 14px;
+  padding: 7px 20px;
+}
+.btn-theme-lg {
+  font-size: 18px;
+  padding: 20px 35px;
+}
+.btn-theme-xl {
+  font-size: 24px;
+  padding: 25px 35px;
+}
+//
+.btn-icon-left {
+  .fa,
+  .glyphicon {
+    margin-right: 7px;
+  }
+}
+.btn-icon-right {
+  .fa,
+  .glyphicon {
+    margin-left: 7px;
+  }
+}
+// play video/media button
+.btn-play {
+  position: relative;
+  display: inline-block !important;
+  padding: 0 !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  text-align: center;
+  background-color: rgba(red(@color),green(@color),blue(@color),.85);
+  color: @white;
+  .fa {
+    font-size: 60px;
+    line-height: 150px;
+    margin-right: -9px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 180px !important;
+    height: 180px !important;
+    top: -16px;
+    left: -16px;
+    border-radius: 50% !important;
+    border: solid 10px rgba(red(@color),green(@color),blue(@color),.35);
+  }
+  a:hover &,
+  &:hover {
+    background-color: @white;
+    color: @color;
+  }
+}
+//
+.btn-title-more {
+  float: right;
+  font-size: 11px;
+  padding: 12px;
+  margin-top: -10px;
+  margin-left: 20px;
+  margin-bottom: -30px;
+  background-color: transparent;
+  border-width: 3px;
+  border-color: #e9e9e9;
+  color: @dark;
+  .fa,
+  .glyphicon {
+    font-size: 14px;
+    margin-top: -1px;
+  }
+}
+.btn-title-more:hover {
+  background-color: @dark;
+  border-color: @dark;
+  color: @white;
+}
+// buttons row
+p.btn-row {
+  margin-top: -10px;
+  & .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  & .text {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+
+  }
+}
+
+.btn-view-more-block {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  font-size: 18px;
+  padding: 13px 35px;
+  border-color: @gray;
+  background-color: @gray;
+  color: @white;
+  &:hover {
+    border-color: @dark;
+    background-color: @dark;
+  }
+}

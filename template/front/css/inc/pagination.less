@@ -1,0 +1,66 @@
+/* Pagination
+/* ========================================================================== */
+
+@import "vars";
+
+.pagination-wrapper {
+  border-top: solid 1px @grayLighter;
+  margin-top: 30px;
+  padding-top: 30px;
+  line-height: 0;
+}
+
+.pagination {
+  margin: -10px 0 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1;
+  > li > a {
+    font-weight: 700;
+    background-color: transparent;
+    color: @dark;
+    margin: 10px 10px 0 0;
+    padding: 7px 15px 7px 15px;
+  }
+  > li:first-child > a,
+  > li:first-child > span {
+    border-radius: 0;
+    background-color: transparent;
+  }
+  > li:last-child > a,
+  > li:last-child > span {
+    border-radius: 0;
+    background-color: transparent;
+  }
+  > li > a,
+  > li > span {
+    border: solid 3px rgba(red(@dark),green(@dark),blue(@dark),.1);
+  }
+  > li > a:hover,
+  > li > span:hover,
+  > li > a:focus,
+  > li > span:focus {
+    border-color: @color;
+    background-color: @color;
+    color: @white;
+  }
+  > .active > a,
+  > .active > span,
+  > .active > a:hover,
+  > .active > span:hover,
+  > .active > a:focus,
+  > .active > span:focus {
+    background-color: rgba(red(@dark),green(@dark),blue(@dark),.1);
+    border-color: transparent;
+    color: @dark;
+  }
+  > .disabled > span,
+  > .disabled > span:hover,
+  > .disabled > span:focus,
+  > .disabled > a,
+  > .disabled > a:hover,
+  > .disabled > a:focus {
+    color: @dark;
+    background-color: transparent;
+  }
+}

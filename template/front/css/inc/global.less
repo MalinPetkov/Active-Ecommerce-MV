@@ -1,0 +1,23 @@
+/* Global properties (body, common classes, structure etc)
+/* ========================================================================== */
+
+@import "vars";
+
+body {
+  font-family: @fontFamily;
+  font-size: 14px;
+  line-height: 1.72;
+  background: @white;
+  color: @textColor;
+
+  -webkit-font-kerning: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: visible !important; // /* reset animate.css / if hidden parallax buggy */
+  position:relative;
+
+  overflow-x: hidden;
+}
+
+body.boxed {
+  background: @bodyColor;
+}

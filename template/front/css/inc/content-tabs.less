@@ -1,0 +1,91 @@
+/* Tabs
+/* ========================================================================== */
+
+@import "vars";
+
+.content-tabs {
+  .nav-tabs {
+    border-bottom: none;
+    > li > a {
+      margin-top: 5px;
+      padding-bottom: 10px;
+      @media (min-width: 1200px) {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    }
+    > li > a,
+    > li > a:focus {
+      border-radius: 0;
+      border-color: @grayLighter @grayLighter @grayLighter;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: #f5f6f7;
+      color: @dark;
+    }
+    > li.active > a {
+      position: relative;
+      margin-top: 0;
+      padding-bottom: 15px;
+      &:before {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: -4px;
+        left: -1px;
+        background-color: @dark;
+      }
+      &:after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: -4px;
+        right: -1px;
+        background-color: @dark;
+      }
+    }
+    > li.active > a {
+      background-color: @white;
+      border-color: @grayLighter @grayLighter transparent;
+      border-top: solid 1px @dark;
+      color: @color;
+    }
+  }
+  .tab-content {
+    padding: 15px;
+    @media (min-width: 1200px) {
+      padding: 35px;
+    }
+    border: solid 1px @grayLighter;
+    background-color: @white;
+  }
+  .media > .pull-left {
+    margin-right: 15px;
+  }
+  .media > .pull-right {
+    margin-left: 15px;
+  }
+  .media + .media {
+    border-top: solid 1px @grayLighter;
+    padding-top: 15px;
+  }
+  .media {
+    p {margin-bottom: 0; font-size: 13px;}
+    p + p {margin-top: 10px;}
+    .media-heading {margin-bottom: 0; font-size: 14px; font-weight: bold; line-height: 20px;}
+    .post-date {margin-bottom: 0; font-size: 12px; color: @grayLight; line-height: 20px;}
+  }
+  #item-description {
+    p {margin-bottom: 0;}
+    p + p {margin-top: 20px;}
+  }
+  .rating {
+    display: block;
+    margin-bottom: 30px;
+  }
+}

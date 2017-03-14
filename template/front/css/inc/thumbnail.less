@@ -1,0 +1,189 @@
+/* Thumbnails
+/* ========================================================================== */
+
+@import "vars";
+
+.thumbnail {
+  @media (max-width: 991px) {
+    max-width: 450px;
+  }
+  margin: 0 auto;
+  border-radius: 0;
+  background-color: transparent;
+  position: relative;
+}
+.thumbnail.hover,
+.thumbnail:hover {border: solid 1px @color;}
+
+.thumbnail.no-border,
+.thumbnail.no-border.hover,
+.thumbnail.no-border:hover {border: none;}
+.thumbnail.no-padding {padding: 0;}
+
+.row.thumbnails {margin-top: -30px;}
+.row.thumbnails .thumbnail {margin-top: 30px;}
+
+.row.thumbnails.no-padding {margin-top: 0; margin-left: 0; margin-right: 0;}
+.row.thumbnails.no-padding [class*='col-'] {padding: 0;}
+.row.thumbnails.no-padding .thumbnail {margin-top: 0;}
+
+/* Thumbnail Media/Image
+/* -------------------------------------------------------------------------- */
+
+.thumbnail .media {
+  overflow: hidden;
+  position: relative;
+}
+.thumbnail .media:after {
+//  content: '';
+//  position: absolute;
+//  top: 0; right: 0; bottom: 0; left: 0;
+}
+.thumbnail.hover .media:after,
+.thumbnail:hover .media:after {
+//  opacity: 0.1;
+}
+.thumbnail .media img {
+  max-width: 100%;
+  width: 100%;
+}
+.thumbnail.hover .media img,
+.thumbnail:hover .media img {
+//  -webkit-transform: scale(1.2);
+//  -ms-transform: scale(1.2);
+//  transform: scale(1.2);
+}
+// /* fix animation bug */
+.thumbnail .media.img-circle,
+.thumbnail.hover .media.img-circle,
+.thumbnail:hover .media.img-circle {
+//  -webkit-transform: scale(1) !important;
+//  -ms-transform: scale(1) !important;
+//  transform: scale(1) !important;
+}
+
+/* Thumbnail caption
+/* -------------------------------------------------------------------------- */
+
+.thumbnail .caption {
+  padding: 15px 0 0 0;
+  overflow: hidden;
+}
+.thumbnail .caption + .caption {padding-top: 10px;}
+.thumbnail .caption.no-padding-top {padding-top: 0;}
+.thumbnail .caption.no-padding-bottom {padding-bottom: 0;}
+
+.thumbnail .caption.before-media {}
+.thumbnail .caption.hovered {
+  position: absolute;
+  top: 0; right: 0;
+  left: 0; bottom: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  padding: 15px;
+//  background-color: transparent; // main color
+//  background-color: rgba(red(@color), green(@color), blue(@color), 0.60);
+  color: @white;
+  opacity: 0;
+  z-index: 10;
+}
+.thumbnail.hover .caption.hovered,
+.thumbnail:hover .caption.hovered {
+  opacity: 1;
+}
+.caption-wrapper {width: 100%;}
+.caption-inner {}
+
+/* Caption elements
+/* -------------------------------------------------------------------------- */
+
+.caption-title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0 0 5px 0;
+  color: @dark;
+  a {
+    color: @dark;
+    &:hover {
+      color: @color;
+    }
+  }
+}
+
+.icon-view {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border: solid 1px rgba(0,0,0,0.6);
+  border-radius: 50%;
+  display: inline-block;
+  strong {
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    color: @white;
+  }
+  .fa,
+  .glyphicon {
+    font-size: 24px;
+    line-height: 68px;
+  }
+}
+
+.thumbnail .media-link {
+  padding: 0;
+//  margin-right: 30px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  .icon-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    opacity: 0;
+    -webkit-animation: fadeOut .4s;
+    animation: fadeOut .4s;
+  }
+  &:hover {
+    .icon-view {
+      opacity: 1;
+      -webkit-animation: bounceIn .4s;
+      animation: bounceIn .4s;
+    }
+  }
+}
+
+/* Thumbnail transition
+/* -------------------------------------------------------------------------- */
+
+.thumbnail {
+  &, &:hover, &.hover {
+    & span,
+    & .media,
+    & .media img,
+    & .media-link:after,
+    & .icon-view,
+    & .icon-view .fa,
+    & .icon-view .glyphicon,
+    & .caption,
+    & .caption-title,
+    & .caption-zoom,
+    & .caption-link,
+    & .caption-category,
+    & .caption-price,
+    & .caption-wrapper
+    {
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+/* Message box
+/* ========================================================================== */
+
+@import "vars";
+
+.message-box {
+  padding: 15px;
+  position: relative;
+  text-align: center;
+  background-color: @color;
+  color: @white;
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    color: @white;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    bottom: 0; right: 0;
+    background: url('../../assets/img/overlay-banner.png') repeat center center;
+  }
+  .message-box-inner {
+    border: solid 1px @white;
+    padding: 20px 15px;
+    position: relative;
+    z-index: 1;
+  }
+  //
+  &.alt {
+    padding: 12px;
+    text-align: left;
+    background-color: @gray;
+    .message-box-inner {
+      padding: 10px 15px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .btn {
+      font-size: 11px;
+      border-color: @white;
+      background-color: @white;
+      color: @dark;
+      margin-top: -6px;
+      margin-left: 30px;
+      &:hover {
+        border-color: @dark;
+        background-color: @dark;
+        color: @white;
+      }
+    }
+  }
+  &.clear {
+    padding: 0;
+    background: none;
+    color: @dark;
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: 300;
+      text-transform: none;
+      color: @dark;
+    }
+    .message-box-inner {
+      padding: 30px 0;
+      border: solid 1px @grayLight;
+      border-left: none;
+      border-right: none;
+    }
+  }
+}
