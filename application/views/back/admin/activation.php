@@ -41,7 +41,7 @@
                     <div class="panel panel-bordered panel-dark">
                         <div class="panel-heading">
                             <center>
-                                <h3 class="panel-title"><?php echo translate('Commision / Montly Related')?></h3>
+                                <h3 class="panel-title"><?php echo translate('Commision / Monthly Related')?></h3>
                             </center>
                         </div>
                         <div class="panel-body" style="background:#fffffb;">
