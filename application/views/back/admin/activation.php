@@ -11,6 +11,19 @@
 	$c2_set= $this->db->get_where('business_settings', array(
         'type' => 'c2_set'
     ))->row()->value;
+
+	$monthly_set = $this->db->get_where('business_settings', array(
+        'type' => 'monthly_set'
+    ))->row()->value;
+
+
+
+	$direct_seller = $this->db->get_where('business_settings', array(
+        'type' => 'direct_seller'
+    ))->row()->value;
+
+
+
 ?>          
 <div id="content-container">
     <div id="page-title">
@@ -22,6 +35,73 @@
     </div>
 	<div class="row">
     		<div class="col-md-12">
+
+
+<div class="col-md-12">
+                    <div class="panel panel-bordered panel-dark">
+                        <div class="panel-heading">
+                            <center>
+                                <h3 class="panel-title"><?php echo translate('Commision / Montly Related')?></h3>
+                            </center>
+                        </div>
+                        <div class="panel-body" style="background:#fffffb;">
+                            <div class="col-md-4">
+                                <div class="panel">
+                                    <div class="panel-heading bg-white">
+                                        <center>
+                                            <h4 class="panel-title">
+                                                <?php echo translate('Commision / Monthly Activation')?>
+                                            </h4>
+                                        </center>
+                                    </div>
+                        
+                                    <!--Panel body-->
+                                    <div class="panel-body">
+                                       <div class="form-group">
+                                           <div class="col-sm-4 col-sm-offset-5">
+
+
+ <input class='aiz_switchery1' type="checkbox" name="monthly_set" id="id2"									data-set='monthly_set'  value="ok"
+                                                        data-id='' 
+                                                            data-tm='<?php echo translate('Monthly Activated'); ?>' 
+                                                                data-fm='<?php echo translate('Commission Activated'); ?>'
+                                                                    <?php if($monthly_set == 'ok'){ ?>checked<?php } ?> />
+
+
+                                           </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" id="area_direct_seller"  <?php if($monthly_set == 'no'){ ?>style="display:none"<?php } ?>>
+                                <div class="panel">
+                                    <div class="panel-heading bg-white">
+                                        <center>
+                                            <h4 class="panel-title">
+                                                <?php echo translate('Direct Admin / Direct Seller')?>
+                                            </h4>
+                                        </center>
+                                    </div>
+                        
+                                    <!--Panel body-->
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <div class="col-sm-4 col-sm-offset-5">
+                                             <input class='aiz_switchery1' type="checkbox" name="direct_seller" id="id2"									data-set='direct_seller'  value="ok"
+                                                        data-id='' 
+                                                            data-tm='<?php echo translate('Direct Seller Activated'); ?>' 
+                                                                data-fm='<?php echo translate('Direct Admin Activated'); ?>'
+                                                                    <?php if($direct_seller == 'ok'){ ?>checked<?php } ?> />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="col-md-12">
                     <div class="panel panel-bordered panel-dark">
                         <div class="panel-heading">
@@ -236,10 +316,36 @@
 		$(".aiz_switchery1").each(function(){
 			new Switchery($(this).get(0), {color:'rgb(100, 189, 99)', secondaryColor: '#cc2424', jackSecondaryColor: '#c8ff77'});
 
+
+if($(this).data('set') == 'monthly_set'){
+
+//alert($(this).val());
+
+}
+
+
+
 			var changeCheckbox = $(this).get(0);
 			var false_msg = $(this).data('fm');
 			var true_msg = $(this).data('tm');
 			changeCheckbox.onchange = function() {
+
+if($(this).data('set') == 'monthly_set'){
+
+if(changeCheckbox.checked == false){
+
+$('#area_direct_seller').css('display','none');
+
+}
+
+else{
+$('#area_direct_seller').css('display','block');
+
+}
+
+}
+
+
 				$.ajax({url: base_url+'index.php/admin/business_settings/'+$(this).data('set')+'/'+$(this).data('id')+'/'+changeCheckbox.checked, 
 				success: function(result){	
 				  if(changeCheckbox.checked == true){
