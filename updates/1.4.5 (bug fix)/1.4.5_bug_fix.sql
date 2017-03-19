@@ -1,1 +1,0 @@
-INSERT INTO `general_settings` (`general_settings_id`, `type`, `value`) VALUES (NULL, 'mail_status', 'mail'), (NULL, 'captcha_status', 'no');
